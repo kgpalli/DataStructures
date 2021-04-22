@@ -3,47 +3,33 @@ package dst.BST;
 public class TreeNode {
 Node root;
 
-public void addNode(int val){
+public void addNode(int val) {
 
-    // Create a new Node and initialize it
     Node newNode = new Node(val);
-
-    // If there is no root this becomes root
-    if(root == null){
+    if (root == null) {
         root = newNode;
-    }else{
-        // Set root as the Node we will start   with as we traverse the tree
+    } else {
+        Node focueNode = root;
 
-        Node focusNode = root;
-
-        // Future parent for our new Node
         Node parent;
-        while(true){
-            // root is the top parent so we start there
-        parent = focusNode;
-        if(val<focusNode.val){
-        focusNode = focusNode.left;
-
-        // If the left child has no children
-        if(focusNode == null){
-
-            // then place the new node on the left of it
-            parent.left = newNode;
-            return;
-        }
-        }else{   // If we get here put the node on the right
-        focusNode = focusNode.right;
-
-        // If the right child has no children
-        if(focusNode==null){
-            // then place the new node on the right of it
-            parent.right = newNode;
-            return;
-        }
+        while (true) {
+            parent = focueNode;
+            if (val < focueNode.val) {
+                focueNode = focueNode.left;
+                if (focueNode == null) {
+                    parent.left = newNode;
+                    return;
+                }
+            } else {
+                focueNode = focueNode.right;
+                if (focueNode == null) {
+                    parent.right = newNode;
+                    return;
+                }
             }
-
         }
-    } }
+    }
+}
 
    // All nodes are visited in ascending order Recursion is used to go to one node and
     // then go to its child nodes and so forth
@@ -120,10 +106,11 @@ public void addNode(int val){
         tree.addNode(3);
 
       tree.inOrderTraverseTree(tree.root);
-     /* tree.preorderTraverseTreeNode(tree.root);
+      tree.preorderTraverseTreeNode(tree.root);
+        System.out.println();
       tree.postorderTraverseTreeNode(tree.root);
 
-      System.out.println("Search for 2 : ");
+     /* System.out.println("Search for 2 : ");
        System.out.println(tree.findNode(2));*/
 
 
