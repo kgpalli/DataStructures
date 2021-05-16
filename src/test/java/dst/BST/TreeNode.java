@@ -31,6 +31,28 @@ public void addNode(int val) {
     }
 }
 
+public Node createNewNode(int val){
+    Node a = new Node();
+    a.val=val;
+    a.right=null;
+    a.left=null;
+
+    return a;
+}
+
+public Node insert(Node node, int val){
+    if(node ==null){
+        return createNewNode(val);
+    }
+    if(val<node.val){
+        node.left = insert(node.left,val);
+    }else if(val>node.val){
+        node.right = insert(node.right,val);
+    }
+    return node;
+}
+
+
    // All nodes are visited in ascending order Recursion is used to go to one node and
     // then go to its child nodes and so forth
 
@@ -43,7 +65,7 @@ public void addNode(int val) {
          inOrderTraverseTree(focuNode.left);
 
             // Visit the currently focused on node
-            System.out.println(focuNode + " ");
+            System.out.print(focuNode + " ");
 
             // Traverse the right node
             inOrderTraverseTree(focuNode.right);
