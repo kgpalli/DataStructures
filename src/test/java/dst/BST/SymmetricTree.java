@@ -1,5 +1,11 @@
 package dst.BST;
-
+/**
+ * Input: root = [1,2,2,3,4,4,3]
+ * Output: true
+ *
+ * Input: root = [1,2,2,null,3,null,3]
+ * Output: false
+ * */
 public class SymmetricTree {
 
     public static boolean isSymmetric(Node root) {

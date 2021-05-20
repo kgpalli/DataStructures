@@ -33,7 +33,7 @@ public class PracticeBST {
     void inorderRec(Node root){
         if(root != null){
             inorderRec(root.left) ;
-            System.out.println(root.val);
+            System.out.print(root.val + " ");
             inorderRec(root.right);
         }
 
@@ -41,10 +41,15 @@ public class PracticeBST {
     public static void main(String[]args){
 
         PracticeBST bst = new PracticeBST();
-        bst.insert(1);
+       /* bst.insert(1);
         bst.insert(3);
         bst.insert(5);
+*/
 
+        int[]arr = new int[]{4,2,7,1,3,6,9};
+        for(int i:arr){
+            bst.insert(i);
+        }
         bst.printTree();
 
 

@@ -57,18 +57,18 @@ public Node insert(Node node, int val){
     // then go to its child nodes and so forth
 
 
-    public void inOrderTraverseTree(Node focuNode){
+    public void inOrderTraverseTree(Node focusNode){
 
         // Traverse the left node
 
-        if(focuNode != null){
-         inOrderTraverseTree(focuNode.left);
+        if(focusNode != null){
+         inOrderTraverseTree(focusNode.left);
 
             // Visit the currently focused on node
-            System.out.print(focuNode + " ");
+            System.out.print(focusNode + " ");
 
             // Traverse the right node
-            inOrderTraverseTree(focuNode.right);
+            inOrderTraverseTree(focusNode.right);
      } }
 
      public void preorderTraverseTreeNode(Node focusNode){
