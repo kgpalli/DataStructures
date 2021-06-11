@@ -10,7 +10,7 @@ public class DiameterOfBinaryTree_Version2 {
      int lDiameter = diameter(root.left);
      int rDiameter = diameter(root.right);
 
-        return Math.max(lheight + rheight + 1,Math.max(lDiameter,rDiameter))-1;
+        return Math.max(lheight + rheight + 1,Math.max(lDiameter,rDiameter));
 
     }
 

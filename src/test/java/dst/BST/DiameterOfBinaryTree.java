@@ -8,6 +8,7 @@ package dst.BST;
  *
  * Input: root = [1,2]
  * Output: 1
+ * https://www.techiedelight.com/find-diameter-of-a-binary-tree/
  *
  * */
 

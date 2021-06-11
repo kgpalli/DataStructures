@@ -1,5 +1,6 @@
 package dst.BST;
 /**
+ * 404. Sum of Left Leaves
  * Input: root = [3,9,20,null,null,15,7]
  * Output: 24
  * Explanation: There are two left leaves in the binary tree, with values 9 and 15 respectively.
@@ -22,9 +23,7 @@ public class SumOfLeftLeaves {
 
     }
 
-
-
-    public static void main(String[]args){
+        public static void main(String[]args){
         TreeNode tn = new TreeNode();
        tn.root = new Node(3);
         tn.root.left = new Node(9);
