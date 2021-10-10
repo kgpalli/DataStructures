@@ -1,9 +1,12 @@
 package dst.BST;
 
+import java.util.List;
+
 public class Node {
     int val;
     Node left;
     Node right;
+    public List<Node> children;
 
 
     Node(){};
@@ -12,6 +15,11 @@ public class Node {
       this.val = val;
       this.right = right;
       this.left = left;
+    }
+
+    public Node(int _val, List<Node> _children) {
+        val = _val;
+        children = _children;
     }
 
     public String toString(){
